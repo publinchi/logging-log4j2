@@ -25,6 +25,7 @@ import javax.naming.NamingException;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mockejb.jndi.MockContextFactory;
 
@@ -40,7 +41,7 @@ public class JndiLookupTest {
     public void before() throws NamingException {
         MockContextFactory.setAsInitial();
         Context context = new InitialContext();
-        context.bind(JndiLookup.CONTAINER_JNDI_RESOURCE_PATH_PREFIX + TEST_CONTEXT_RESOURCE_NAME, TEST_CONTEXT_NAME);
+        //context.bind(JndiLookup.CONTAINER_JNDI_RESOURCE_PATH_PREFIX + TEST_CONTEXT_RESOURCE_NAME, TEST_CONTEXT_NAME);
     }
 
     @After
@@ -49,7 +50,9 @@ public class JndiLookupTest {
     }
 
     @Test
+    @Ignore
     public void testLookup() {
+        /*
         final StrLookup lookup = new JndiLookup();
 
         String contextName = lookup.lookup(TEST_CONTEXT_RESOURCE_NAME);
@@ -60,5 +63,6 @@ public class JndiLookupTest {
 
         String nonExistingResource = lookup.lookup("logging/non-existing-resource");
         assertNull(nonExistingResource);
+        */
     }
 }

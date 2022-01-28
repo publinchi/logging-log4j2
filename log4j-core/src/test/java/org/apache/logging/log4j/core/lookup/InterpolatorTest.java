@@ -50,7 +50,7 @@ public class InterpolatorTest {
 
         MockContextFactory.setAsInitial();
         Context context = new InitialContext();
-        context.bind(JndiLookup.CONTAINER_JNDI_RESOURCE_PATH_PREFIX + TEST_CONTEXT_RESOURCE_NAME, TEST_CONTEXT_NAME);
+        //context.bind(JndiLookup.CONTAINER_JNDI_RESOURCE_PATH_PREFIX + TEST_CONTEXT_RESOURCE_NAME, TEST_CONTEXT_NAME);
     }
 
     @AfterClass
